@@ -1,0 +1,2 @@
+This file contains implementations and descriptions of commonly used sorting algorithms.
+It's meant to help understand how different sorting techniques work, step-by-step.
