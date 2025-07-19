@@ -1,0 +1,26 @@
+This file contains implementations and descriptions of commonly used sorting algorithms.
+It's meant to help understand how different sorting techniques work, step-by-step.
+
+1. Bubble Sort  
+   - Repeatedly swaps adjacent elements if they are in the wrong order.  
+   - Time Complexity: O(n²) average  
+
+2. Selection Sort  
+   - Finds the minimum element and places it at the beginning.  
+   - Time Complexity: O(n²) average  
+
+3. Insertion Sort  
+   - Inserts each element into its correct position in the sorted part.  
+   - Time Complexity: O(n²) average  
+
+4. Merge Sort  
+   - Divides the array into halves, sorts each, then merges them.  
+   - Time Complexity: O(n log n) average  
+
+5. Quick Sort  
+   - Picks a pivot, partitions the array, then recursively sorts the subarrays.  
+   - Time Complexity: O(n log n) average  
+
+6. Heap Sort  
+   - Builds a max heap and repeatedly extracts the maximum to sort the array.  
+   - Time Complexity: O(n log n) average  
