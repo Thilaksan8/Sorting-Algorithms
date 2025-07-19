@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void selection(){
+void selection(vector<int>&arr){
 
 }
 void printarray(vector<int>&arr){
@@ -17,4 +17,6 @@ int main(){
         arr.push_back(input);
     
     return 0;
+    printarray(arr);
+    selection(arr);
 }
