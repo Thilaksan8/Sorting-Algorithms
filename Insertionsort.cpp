@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 void insertion(vector<int>&arr){
-
+    
 }
 void printarray(vector<int>&arr){
     cout<<"Sorted elements";
