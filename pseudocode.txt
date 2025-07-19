@@ -1,0 +1,107 @@
+BubbleSort(arr):
+    for i from 0 to n - 1:
+        for j from 0 to n - i - 2:
+            if arr[j] > arr[j + 1]:
+                swap arr[j] and arr[j + 1]
+
+
+
+
+
+SelectionSort(arr):
+    for i from 0 to n - 1:
+        minIndex = i
+        for j from i + 1 to n - 1:
+            if arr[j] < arr[minIndex]:
+                minIndex = j
+        swap arr[i] and arr[minIndex]
+
+
+
+
+InsertionSort(arr):
+    for i from 1 to n - 1:
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        arr[j + 1] = key
+
+
+
+
+
+MergeSort(arr, left, right):
+    if left < right:
+        mid = (left + right) / 2
+        MergeSort(arr, left, mid)
+        MergeSort(arr, mid + 1, right)
+        Merge(arr, left, mid, right)
+
+Merge(arr, left, mid, right):
+    create leftSub[] and rightSub[] from arr
+    i = j = 0, k = left
+    while i < size(leftSub) and j < size(rightSub):
+        if leftSub[i] <= rightSub[j]:
+            arr[k] = leftSub[i]
+            i += 1
+        else:
+            arr[k] = rightSub[j]
+            j += 1
+        k += 1
+    copy any remaining elements of leftSub[]
+    copy any remaining elements of rightSub[]
+
+
+
+
+
+
+
+
+QuickSort(arr, low, high):
+    if low < high:
+        pivotIndex = Partition(arr, low, high)
+        QuickSort(arr, low, pivotIndex - 1)
+        QuickSort(arr, pivotIndex + 1, high)
+
+Partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j from low to high - 1:
+        if arr[j] < pivot:
+            i += 1
+            swap arr[i] and arr[j]
+    swap arr[i + 1] and arr[high]
+    return i + 1
+
+
+
+
+
+
+
+HeapSort(arr):
+    buildMaxHeap(arr)
+    for i from n - 1 to 1:
+        swap arr[0] and arr[i]
+        heapify(arr, 0, i)
+
+buildMaxHeap(arr):
+    for i from n/2 - 1 to 0:
+        heapify(arr, i, n)
+
+heapify(arr, i, size):
+    largest = i
+    left = 2*i + 1
+    right = 2*i + 2
+    if left < size and arr[left] > arr[largest]:
+        largest = left
+    if right < size and arr[right] > arr[largest]:
+        largest = right
+    if largest != i:
+        swap arr[i] and arr[largest]
+        heapify(arr, largest, size)
+
+
